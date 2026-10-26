@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RI8WIN NOBEL PATH FOUNDATION | Official Website & Volunteer Portal</title>
+  <meta name="description" content="Official website and volunteer management portal of RI8WIN NOBEL PATH FOUNDATION (Section 8 Non-Profit Company, India). Noble RI8 Framework for Education, Health, and Environment."/>
+  
+  <!-- Favicon / Meta -->
+  <link rel="icon" href="/assets/Banner.png" type="image/png"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0f172a',
+              skyDark: '#0369a1',
+              sky: '#0284c7',
+              skyLight: '#0ea5e9',
+              skySoft: '#e0f2fe',
+              skyPale: '#f0f9ff',
+              accent: '#f59e0b',
+              accentDark: '#d97706'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen antialiased">
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-auto"></div>
+
+  <!-- Top Accessibility, Font Sizing & Quick Support Bar -->
+  <div id="accessibility-bar" class="bg-slate-900 text-slate-300 text-[11px] border-b border-sky-900/60 py-1.5 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <!-- Statutory Identity Sub-badge -->
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-sky-900/80 text-sky-200 border border-sky-700/60">
+          Govt. of India • MCA Regd.
+        </span>
+        <span class="hidden sm:inline text-slate-400">CIN: <span class="font-mono text-slate-300 font-semibold">U88900MH2026NPL481549</span></span>
+      </div>
+
+      <!-- Accessibility Font Size & Contrast Controls -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1.5" title="Adjust Website Text Font Size">
+          <span class="text-slate-400 font-medium">Font Size:</span>
+          <div class="inline-flex rounded-md shadow-xs bg-slate-800 p-0.5 border border-slate-700">
+            <button type="button" onclick="changeFontSize('small')" id="font-btn-small" class="font-size-btn px-2 py-0.5 rounded text-[10px] font-bold text-slate-300 hover:text-white hover:bg-sky-800 transition" title="Smaller Font (90%)">A-</button>
+            <button type="button" onclick="changeFontSize('normal')" id="font-btn-normal" class="font-size-btn active px-2 py-0.5 rounded text-[10px] font-bold text-white bg-sky-700 transition" title="Default Font (100%)">A</button>
+            <button type="button" onclick="changeFontSize('large')" id="font-btn-large" class="font-size-btn px-2 py-0.5 rounded text-[10px] font-bold text-slate-300 hover:text-white hover:bg-sky-800 transition" title="Larger Font (110%)">A+</button>
+            <button type="button" onclick="changeFontSize('xlarge')" id="font-btn-xlarge" class="font-size-btn px-2 py-0.5 rounded text-[10px] font-bold text-slate-300 hover:text-white hover:bg-sky-800 transition" title="Extra Large Font (120%)">A++</button>
+          </div>
+        </div>
+
+        <button type="button" onclick="toggleHighContrast()" class="hidden md:inline-flex items-center gap-1 px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-semibold border border-slate-700 transition" title="Toggle High Contrast Display">
+          <span>🌓</span> Contrast
+        </button>
+
+        <a href="#donate" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-[10px] shadow-xs transition">
+          <span>❤️</span> Donate
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="bg-gradient-to-r from-sky-900 via-sky-800 to-sky-950 text-white sticky top-0 z-40 shadow-lg border-b border-sky-700/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Organization Identity Logo -->
+        <a href="#home" class="flex items-center gap-3.5 group">
+          <div id="header-logo-badge" class="w-11 h-11 rounded-xl bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-white font-extrabold text-lg shadow border border-sky-300/40 group-hover:scale-105 transition-transform overflow-hidden">
+            <span id="header-logo-text">R8</span>
+          </div>
+          <div class="space-y-0.5">
+            <span id="header-org-name" class="block text-base sm:text-lg font-black tracking-wider text-white group-hover:text-sky-300 transition-colors uppercase">
+              RI8WIN NOBEL PATH FOUNDATION
+            </span>
+            <span id="header-org-tagline" class="block text-[11px] font-medium text-sky-200/90 tracking-wide">
+              Right Noble Path • Section 8 Non-Profit Co. (MCA India)
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-4 text-xs font-semibold">
+          <a href="#home" data-route="home" class="nav-link text-gray-200 hover:text-white transition">Home</a>
+          <a href="#about" data-route="about" class="nav-link text-gray-200 hover:text-white transition">About Us</a>
+          <a href="#objectives" data-route="objectives" class="nav-link text-gray-200 hover:text-white transition">Objectives</a>
+          <a href="#programs" data-route="programs" class="nav-link text-gray-200 hover:text-white transition">Programs</a>
+          <a href="#events" data-route="events" class="nav-link text-gray-200 hover:text-white transition">Events</a>
+          <a href="#news" data-route="news" class="nav-link text-gray-200 hover:text-white transition">News & Activities</a>
+          <div id="navbar-custom-pages" class="inline-flex items-center gap-4"></div>
+          <a href="#verify" data-route="verify" class="nav-link text-gray-200 hover:text-white transition">Verify Cert</a>
+          <a href="#transparency" data-route="transparency" class="nav-link text-gray-200 hover:text-white transition">Transparency</a>
+          <a href="#contact" data-route="contact" class="nav-link text-gray-200 hover:text-white transition">Contact</a>
+        </nav>
+
+        <!-- Right User Actions -->
+        <div class="hidden sm:flex items-center gap-2.5" id="nav-user-actions">
+          <!-- Populated by JavaScript based on auth state -->
+          <a href="#donate" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-sm transition flex items-center gap-1">
+            <span>❤️</span> Donate
+          </a>
+          <button onclick="openAuthModal('login')" class="px-3 py-1.5 rounded-lg text-xs font-medium text-gray-200 hover:text-white hover:bg-white/10 transition">
+            Sign In
+          </button>
+          <a href="#volunteer-register" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-sky-500 hover:bg-sky-400 text-white shadow-sm transition">
+            Join as Volunteer
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-200 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-sky-800 bg-sky-950 px-4 pt-3 pb-6 space-y-3">
+      <nav class="flex flex-col gap-2.5 text-sm font-semibold">
+        <a href="#home" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-gray-200 hover:text-sky-300">Home</a>
+        <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-gray-200 hover:text-sky-300">About Us</a>
+        <a href="#objectives" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-gray-200 hover:text-sky-300">Our Objectives</a>
+        <a href="#programs" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-gray-200 hover:text-sky-300">Programs</a>
+        <a href="#events" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-gray-200 hover:text-sky-300">Events</a>
+        <a href="#news" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-sky-200 hover:text-white">📰 News & Activities</a>
+        <div id="mobile-custom-pages" class="flex flex-col gap-2.5"></div>
+        <a href="#donate" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-amber-300 hover:text-amber-200 font-bold flex items-center gap-1.5"><span>❤️</span> Donate & Support</a>
+        <a href="#member-login" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-sky-300 hover:text-white font-semibold flex items-center gap-1.5"><span>👔</span> Member & Staff Portal</a>
+        <a href="#volunteer-register" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-amber-300 hover:text-amber-200">Join as Volunteer</a>
+        <a href="#verify" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-gray-200 hover:text-sky-300">Verify Certificate</a>
+        <a href="#transparency" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-gray-200 hover:text-sky-300">Transparency</a>
+        <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link py-1 text-gray-200 hover:text-sky-300">Contact Us</a>
+      </nav>
+      <div id="mobile-user-actions" class="pt-3 border-t border-sky-800/80"></div>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main id="main-content" class="flex-1 w-full"></main>
+
+  <!-- Official Footer -->
+  <footer id="site-footer" class="bg-slate-950 text-gray-300 border-t border-sky-950 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-gray-800">
+        
+        <!-- Org Summary -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center font-bold text-white text-sm">
+              R8
+            </div>
+            <span class="font-extrabold text-sm text-white tracking-wider">RI8WIN NOBEL PATH FOUNDATION</span>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Meaning: <em>Ri8NoblePath — Right Noble Path</em>. A registered Section 8 non-profit organization under the Companies Act, 2013, Ministry of Corporate Affairs, Government of India.
+          </p>
+          <div class="text-[11px] font-mono text-sky-400 space-y-1">
+            <div>CIN: <strong>U88900MH2026NPL481549</strong></div>
+            <div>PAN: AAQCR4085D | TAN: PNER43317B</div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Navigation</h4>
+          <ul class="text-xs space-y-1.5 text-gray-400">
+            <li><a href="#home" class="hover:text-sky-400 transition">Home</a></li>
+            <li><a href="#about" class="hover:text-sky-400 transition">About Foundation</a></li>
+            <li><a href="#objectives" class="hover:text-sky-400 transition">Our Objectives</a></li>
+            <li><a href="#programs" class="hover:text-sky-400 transition">Active Programs</a></li>
+            <li><a href="#events" class="hover:text-sky-400 transition">Upcoming Events</a></li>
+            <li><a href="#volunteer-register" class="hover:text-sky-400 transition font-semibold text-sky-300">Volunteer Registration</a></li>
+            <li><a href="#member-login" class="hover:text-sky-400 transition text-sky-300 font-semibold flex items-center gap-1"><span>👔</span> Member & Staff Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Governance & Verification -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Governance & Trust</h4>
+          <ul class="text-xs space-y-1.5 text-gray-400">
+            <li><a href="#verify" class="hover:text-sky-400 transition">Verify Certificate Online</a></li>
+            <li><a href="#transparency" class="hover:text-sky-400 transition">Certificate of Incorporation</a></li>
+            <li><a href="#transparency" class="hover:text-sky-400 transition">Statutory Disclosures</a></li>
+            <li><a href="#volunteer-guidelines" class="hover:text-sky-400 transition">Volunteer Guidelines</a></li>
+            <li><a href="#privacy-policy" class="hover:text-sky-400 transition">Privacy Policy (DPDP Act)</a></li>
+            <li><a href="#terms-of-use" class="hover:text-sky-400 transition">Terms of Use</a></li>
+            <li><a href="#volunteer-dashboard" class="hover:text-sky-400 transition">Volunteer Dashboard</a></li>
+            <li><a href="#admin" class="hover:text-amber-400 transition text-amber-300 font-semibold">NGO Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Registered Office & Contact -->
+        <div class="space-y-3 text-xs">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Registered Office</h4>
+          <p class="text-gray-400 leading-relaxed">
+            The Springs 2, 701, Plot No 15, Sector 20, Roadpali, Kalamboli, Navi Mumbai, Maharashtra - 410218, India
+          </p>
+          <div class="space-y-1 text-gray-400">
+            <div>Email: <a href="mailto:contact@ri8winnobelpath.org" class="text-sky-300 hover:underline">contact@ri8winnobelpath.org</a></div>
+            <div>Helpline: <span class="font-mono text-gray-300">+91 8691016082</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Statutory Declaration Bar -->
+      <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <p class="text-center md:text-left">
+          &copy; 2026 <strong>RI8WIN NOBEL PATH FOUNDATION</strong>. All rights reserved. Non-Profit, Non-Religious, Non-Political. Income applied solely to objectives. No profit distribution to members.
+        </p>
+        <div class="flex items-center gap-4 text-xs">
+          <a href="#volunteer-guidelines" class="hover:text-sky-400">Volunteer Guidelines</a>
+          <a href="#privacy-policy" class="hover:text-sky-400">Privacy Policy</a>
+          <a href="#terms-of-use" class="hover:text-sky-400">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Generic Reusable Modal (Review / Program / Event RSVP) -->
+  <div id="generic-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
+    <div id="generic-modal-content" class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl overflow-y-auto max-h-[90vh] animate-fadeIn"></div>
+  </div>
+
+  <!-- Auth Modal (Sign In / Track Application) -->
+  <div id="auth-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
+    <div id="auth-modal-content" class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl animate-fadeIn"></div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="/js/api.js"></script>
+  <script src="/js/admin_extensions.js"></script>
+  <script src="/js/app.js"></script>
+
+</body>
+</html>

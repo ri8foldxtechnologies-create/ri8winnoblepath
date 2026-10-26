@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RI8WIN NOBEL PATH FOUNDATION | Section 8 Non-Profit Organization</title>
+  <meta name="description" content="Official website and management portal of RI8WIN NOBEL PATH FOUNDATION (Section 8 Non-Profit Company, MCA India, CIN: U88900MH2026NPL481549). Dedicated to Education, Healthcare, and Environment."/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- QRCode.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0c4a6e',
+              blue: '#0369a1',
+              sky: '#0284c7',
+              lightSky: '#38bdf8',
+              gold: '#d4af37',
+              goldDark: '#b45309',
+              green: '#10b981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+    
+    :root {
+      --app-font-size: 16px;
+    }
+    html { font-size: var(--app-font-size); }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .serif-font { font-family: 'Playfair Display', serif; }
+    .cinzel { font-family: 'Cinzel', serif; }
+    
+    .high-contrast {
+      filter: contrast(125%);
+      background-color: #000 !important;
+      color: #fff !important;
+    }
+    .high-contrast header, .high-contrast footer {
+      background-color: #000 !important;
+      border-color: #fff !important;
+    }
+    .high-contrast .bg-white, .high-contrast .bg-stone-50 {
+      background-color: #121212 !important;
+      color: #f1f5f9 !important;
+      border-color: #475569 !important;
+    }
+    
+    @media print {
+      body * { visibility: hidden; }
+      #printable-modal-content, #printable-modal-content * { visibility: visible; }
+      #printable-modal-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-stone-50 text-slate-800 flex flex-col min-h-screen antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Top Accessibility Bar -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-1.5 px-4 border-b border-slate-800 no-print">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-wrap">
+      <div class="flex items-center gap-3 text-[11px] text-slate-300">
+        <span class="inline-flex items-center gap-1.5 text-amber-400 font-bold">
+          <span>🏛️</span> MCA Section 8 Non-Profit
+        </span>
+        <span class="hidden sm:inline text-slate-500">•</span>
+        <span class="hidden sm:inline">CIN: <strong class="text-white">U88900MH2026NPL481549</strong></span>
+        <span class="hidden md:inline text-slate-500">•</span>
+        <span class="hidden md:inline">PAN: AAQCR4085D</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="flex items-center bg-slate-800/80 rounded-lg p-0.5 border border-slate-700/60 text-[11px] font-bold">
+          <span class="px-2 text-slate-400 font-normal">Font:</span>
+          <button onclick="setFontSize(14)" class="px-2 py-0.5 rounded hover:bg-slate-700 transition" title="Small (14px)">A-</button>
+          <button onclick="setFontSize(16)" class="px-2 py-0.5 rounded hover:bg-slate-700 transition" title="Default (16px)">A</button>
+          <button onclick="setFontSize(18)" class="px-2 py-0.5 rounded hover:bg-slate-700 transition" title="Large (18px)">A+</button>
+          <button onclick="setFontSize(20)" class="px-2 py-0.5 rounded hover:bg-slate-700 transition" title="Extra Large (20px)">A++</button>
+        </div>
+        <button onclick="toggleContrast()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700/60 text-[11px] font-semibold transition flex items-center gap-1">
+          <span>◑</span> Contrast
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-auto no-print"></div>
+
+  <!-- Main Top Navigation (Light Blue & Ocean Navy Theme) -->
+  <header class="bg-gradient-to-r from-[#0c4a6e] via-[#0369a1] to-[#0284c7] text-white sticky top-0 z-40 shadow-lg border-b border-sky-400/30 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Legal Brand Identity -->
+        <a href="#home" class="flex items-center gap-3.5 group">
+          <div id="header-logo-container" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white font-extrabold text-lg shadow-inner border border-white/30 group-hover:scale-105 transition-transform overflow-hidden shrink-0">
+            <span id="header-logo-badge">R8</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="block text-base sm:text-lg font-black tracking-wider text-white group-hover:text-amber-300 transition-colors uppercase">
+              RI8WIN NOBEL PATH FOUNDATION
+            </span>
+            <span class="block text-[11px] font-medium text-sky-100/90 tracking-wide">
+              Right Noble Path • Section 8 Non-Profit Co. (MCA India)
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-4 text-xs font-semibold">
+          <a href="#home" class="nav-link text-sky-100 hover:text-white transition">Home</a>
+          <a href="#about" class="nav-link text-sky-100 hover:text-white transition">About Us</a>
+          <a href="#objectives" class="nav-link text-sky-100 hover:text-white transition">Objectives</a>
+          <a href="#programs" class="nav-link text-sky-100 hover:text-white transition">Programs</a>
+          <a href="#news" class="nav-link text-sky-100 hover:text-white transition flex items-center gap-1">
+            <span>📰</span> News & Activities
+          </a>
+          <a href="#donate" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold transition shadow-sm flex items-center gap-1">
+            <span>💚</span> Donate Online
+          </a>
+          <a href="#verify" class="nav-link text-sky-100 hover:text-white transition">Verify</a>
+          <a href="#transparency" class="nav-link text-sky-100 hover:text-white transition">Transparency</a>
+          <a href="#contact" class="nav-link text-sky-100 hover:text-white transition">Contact</a>
+        </nav>
+
+        <!-- Right User Actions -->
+        <div class="hidden sm:flex items-center gap-2.5" id="nav-actions">
+          <button onclick="openModal('auth-modal')" class="px-3.5 py-2 rounded-lg text-xs font-semibold text-white bg-white/10 hover:bg-white/20 transition border border-white/25">
+            Admin / Login
+          </button>
+          <a href="#volunteer-register" class="px-4 py-2 rounded-lg text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-sm transition">
+            Join Volunteer
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-lg text-sky-100 hover:text-white hover:bg-white/10 focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden xl:hidden border-t border-sky-600/50 bg-[#0c4a6e] px-4 pt-3 pb-6 space-y-3">
+      <nav class="flex flex-col gap-2.5 text-sm font-semibold">
+        <a href="#home" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white">Home</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white">About Us</a>
+        <a href="#objectives" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white">Our Objectives</a>
+        <a href="#programs" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white">Programs</a>
+        <a href="#news" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white flex items-center gap-1">📰 News & Activities</a>
+        <a href="#donate" onclick="toggleMobileMenu()" class="py-1 text-emerald-400 font-bold hover:text-emerald-300 flex items-center gap-1">💚 Donate Online (80G Tax Benefit)</a>
+        <a href="#page/csr-partnerships" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white">CSR & Institutional Alliances</a>
+        <a href="#verify" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white">Verify Certificate</a>
+        <a href="#transparency" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white">Transparency</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="py-1 text-sky-100 hover:text-white">Contact</a>
+      </nav>
+      <div class="pt-2 flex flex-col gap-2 border-t border-sky-800">
+        <button onclick="toggleMobileMenu(); openModal('auth-modal')" class="w-full text-center py-2 text-xs font-bold text-white bg-white/10 border border-white/20 rounded-lg">Sign In / Admin</button>
+        <a href="#volunteer-register" onclick="toggleMobileMenu()" class="w-full text-center py-2 text-xs font-bold bg-amber-400 text-slate-950 rounded-lg">Join as Volunteer</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dynamic Page Content Outlet -->
+  <main id="app-root" class="flex-grow">
+    <!-- Populated by JavaScript Router -->
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-950 text-slate-300 pt-14 pb-8 border-t border-slate-800 text-xs no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
+        
+        <!-- Col 1: Brand & Philosophy -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-sky-700 flex items-center justify-center text-white font-extrabold text-base shadow">R8</div>
+            <span class="font-extrabold text-white text-sm tracking-wide">RI8WIN NOBEL PATH FOUNDATION</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed text-[11px]">
+            Meaning: <strong>Ri8NoblePath — Right Noble Path</strong>. A non-profit company registered under Section 8 of the Companies Act, 2013, Ministry of Corporate Affairs, Government of India.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1 text-[11px] text-slate-400">
+            <div><strong class="text-slate-200">CIN:</strong> U88900MH2026NPL481549</div>
+            <div><strong class="text-slate-200">PAN:</strong> AAQCR4085D | <strong class="text-slate-200">TAN:</strong> PNER43317B</div>
+            <div><strong class="text-slate-200">Jurisdiction:</strong> PAN-India Non-Profit</div>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider text-sky-400">Quick Navigation</h4>
+          <ul class="space-y-1.5 text-slate-400">
+            <li><a href="#about" class="hover:text-white transition">About the Foundation</a></li>
+            <li><a href="#objectives" class="hover:text-white transition">Statutory 11 Objectives</a></li>
+            <li><a href="#news" class="hover:text-white transition">Ground Activities & News</a></li>
+            <li><a href="#donate" class="hover:text-emerald-400 font-semibold transition">Donate Online (80G Tax Exemption)</a></li>
+            <li><a href="#page/csr-partnerships" class="hover:text-white transition">CSR & Institutional Alliances</a></li>
+            <li><a href="#verify" class="hover:text-white transition">Verify Volunteer Certificate</a></li>
+            <li><a href="#transparency" class="hover:text-white transition">Section 8 Statutory Disclosures</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Registered Office -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider text-sky-400">Registered Office</h4>
+          <p class="text-slate-400 text-[11px] leading-relaxed">
+            The Springs 2, 701, Plot No 15, Sector 20, Roadpali, Kalamboli, Navi Mumbai, Maharashtra - 410218, India
+          </p>
+          <div class="space-y-1 pt-1 text-[11px]">
+            <div><strong class="text-slate-200">Email:</strong> contact@ri8winnobelpath.org</div>
+            <div><strong class="text-slate-200">Helpline:</strong> +91 8691016082</div>
+            <div><strong class="text-slate-200">Hours:</strong> Mon - Sat: 9:30 AM - 6:30 PM</div>
+          </div>
+        </div>
+
+        <!-- Col 4: Section 8 Honorary Mandate -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider text-sky-400">Section 8 Compliance</h4>
+          <p class="text-slate-400 text-[11px] leading-relaxed">
+            In strict compliance with Section 8(1) of the Companies Act, 2013, 100% of the Foundation's income and assets are applied exclusively towards charitable non-profit objects. Directors and members serve in an honorary capacity without salary, profit, or dividend.
+          </p>
+          <div class="pt-2">
+            <a href="#donate" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition">
+              <span>💚</span> Donate & Support Mission
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-[11px]">
+        <div>© 2026 RI8WIN NOBEL PATH FOUNDATION. All Rights Reserved. Non-Profit Company (MCA, India).</div>
+        <div class="flex items-center gap-3">
+          <a href="#transparency" class="hover:text-slate-400">Volunteer Guidelines</a>
+          <span>•</span>
+          <a href="#transparency" class="hover:text-slate-400">Privacy Policy</a>
+          <span>•</span>
+          <a href="#transparency" class="hover:text-slate-400">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Generic Printable Modal Container (Certificates, Letters, Donation Receipts) -->
+  <div id="generic-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 no-print">
+    <div id="generic-modal-box" class="bg-white rounded-2xl max-w-3xl w-full p-6 shadow-2xl relative max-h-[90vh] overflow-y-auto text-xs">
+      <button onclick="closeGenericModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 font-bold text-base">✕</button>
+      <div id="generic-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Sign In / Admin Login Modal -->
+  <div id="auth-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 no-print">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative space-y-4 text-xs">
+      <button onclick="closeModal('auth-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 font-bold text-base">✕</button>
+      <div class="text-center space-y-1">
+        <div class="w-12 h-12 rounded-xl bg-sky-700 text-white flex items-center justify-center text-xl font-bold mx-auto mb-2">R8</div>
+        <h3 class="text-base font-bold text-slate-900">Official Portal Login</h3>
+        <p class="text-gray-500 text-[11px]">Super Admin & NGO Officers</p>
+      </div>
+      <form onsubmit="handleLogin(event)" class="space-y-3">
+        <div>
+          <label class="block font-semibold mb-1 text-gray-700">Official Email</label>
+          <input type="email" id="login-email" value="admin@ri8win.org" class="w-full p-2.5 rounded-lg border border-gray-300 text-xs" required/>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-gray-700">Password</label>
+          <input type="password" id="login-password" value="Admin@RI8Win2026!" class="w-full p-2.5 rounded-lg border border-gray-300 text-xs" required/>
+        </div>
+        <div class="p-2.5 rounded-lg bg-sky-50 border border-sky-100 text-[11px] text-sky-800">
+          Default Demo: <strong>admin@ri8win.org</strong> / <strong>Admin@RI8Win2026!</strong>
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-lg bg-[#0369a1] hover:bg-sky-800 text-white font-bold transition">
+          Sign In to Admin Portal
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Application Logic & Local Storage Database -->
+  <script>
+    // Accessibility Font Size & Contrast
+    function setFontSize(size) {
+      document.documentElement.style.setProperty('--app-font-size', size + 'px');
+      localStorage.setItem('ri8_font_size', size);
+    }
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+      const isHigh = document.body.classList.contains('high-contrast');
+      localStorage.setItem('ri8_contrast', isHigh ? 'true' : 'false');
+    }
+    const savedFontSize = localStorage.getItem('ri8_font_size');
+    if (savedFontSize) setFontSize(Number(savedFontSize));
+    if (localStorage.getItem('ri8_contrast') === 'true') document.body.classList.add('high-contrast');
+
+    // Standalone Mock Database Seed (Section 8 Compliant)
+    const DEFAULT_DATA = {
+      settings: {
+        legal_name: 'RI8WIN NOBEL PATH FOUNDATION',
+        meaning: 'Ri8NoblePath - Right Noble Path',
+        cin: 'U88900MH2026NPL481549',
+        pan: 'AAQCR4085D',
+        tan: 'PNER43317B',
+        registered_office: 'The Springs 2, 701, Plot No 15, Sector 20, Roadpali, Kalamboli, Navi Mumbai, Maharashtra - 410218, India',
+        contact_email: 'contact@ri8winnobelpath.org',
+        contact_phone: '+91 8691016082',
+        hero_title: 'Right Noble Path: Empowering Communities Through Sustainable Action',
+        hero_subtitle: 'A Section 8 non-profit organization promoting free education, preventive healthcare, and environmental sustainability based on the Noble RI8 framework.',
+        hero_image_url: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1000',
+        logo_url: '',
+        donation_upi_id: 'ri8winnobelpath@upi',
+        donation_account_name: 'RI8WIN NOBEL PATH FOUNDATION',
+        donation_bank_name: 'State Bank of India',
+        donation_account_number: '40291823901',
+        donation_ifsc: 'SBIN0012345',
+        donation_branch: 'Kalamboli / Navi Mumbai Branch',
+        donation_80g_note: 'Donations to RI8WIN NOBEL PATH FOUNDATION are eligible for tax deduction under Section 80G of the Income Tax Act, 1961. PAN is mandatory for claiming 80G deduction.',
+        governing_body: [
+          { name: 'Ms. Shilpa Sunil Umare', role: 'Director & Co-Founder', qualification: 'MA Economics, Early Childhood Educator', contact: 'shilpa.manwatkar@gmail.com', photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400', location: 'Navi Mumbai, Maharashtra', visible: true },
+          { name: 'Ms. Sarika Uttamchand Wakde', role: 'Director & Co-Founder', qualification: 'MA, Entrepreneur & Community Advocate', contact: 'sarikauwakde1977@gmail.com', photo: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400', location: 'Ballarpur, Dist. Chandrapur, Maharashtra', visible: true }
+        ],
+        executive_members: [
+          { name: 'Dr. Rameshwar V. Deshmukh', role: 'Vice President (Community Health & Rural Medicine)', category: 'Executive Office Bearer', appointment_date: '06 October 2026', membership_id: 'RI8-EXEC-2026-1001', certificate_number: 'CERT-HON-RI8-2026-1001', honorary_terms: 'Honorary Office Bearer • Serving without salary, remuneration, or profit-sharing as mandated by Section 8 of the Companies Act, 2013.', visible: true },
+          { name: 'Adv. Manisha K. Jadhav', role: 'Honorary Legal & Compliance Advisor', category: 'Executive Office Bearer', appointment_date: '06 October 2026', membership_id: 'RI8-EXEC-2026-1002', certificate_number: 'CERT-HON-RI8-2026-1002', honorary_terms: 'Honorary Legal Advisor • Providing voluntary legal counsel on corporate and Section 8 governance.', visible: true },
+          { name: 'Prof. Amit S. Kulkarni', role: 'Honorary Education Programs Director', category: 'Executive Office Bearer', appointment_date: '06 October 2026', membership_id: 'RI8-EXEC-2026-1003', certificate_number: 'CERT-HON-RI8-2026-1003', honorary_terms: 'Honorary Education Director • Leading digital literacy programs across Raigad rural schools.', visible: true }
+        ]
+      },
+      news: [
+        {
+          id: 1,
+          slug: 'free-digital-literacy-initiative-launched',
+          title: 'RI8WIN Foundation Launches Free Digital Literacy Initiative for Underprivileged Children',
+          category: 'Education & Youth',
+          summary: 'A community digital classroom launched at Kalamboli providing basic computer training and academic support.',
+          content: '<p>The RI8WIN NOBEL PATH FOUNDATION has officially inaugurated its free digital literacy lab in Kalamboli. Under the Noble RI8 Right Action and Right Livelihood principles, the program provides over 100 students with free access to desktop computers, foundational coding tutorials, and academic mentorship.</p><p>Founding directors highlighted that the Foundation is dedicated to bridging the digital divide in rural and semi-urban clusters across Maharashtra.</p>',
+          image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800',
+          published_date: '18 October 2026',
+          views: 142
+        },
+        {
+          id: 2,
+          slug: 'mass-community-afforestation-drive',
+          title: 'Mass Community Afforestation Drive: 50+ Native Trees Planted at Roadpali & Kalamboli',
+          category: 'Environment & Sustainability',
+          summary: 'Volunteers and local residents gathered for an indigenous tree plantation drive to promote urban biodiversity.',
+          content: '<p>Under the Environmental Action mandate of the Foundation, 50+ native saplings including Neem, Peepal, and Banyan were planted across public zones in Roadpali. The saplings will be nurtured by local youth volunteer squads.</p>',
+          image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800',
+          published_date: '22 October 2026',
+          views: 98
+        },
+        {
+          id: 3,
+          slug: 'statutory-transparency-update-mca',
+          title: 'Statutory Transparency Update: Foundation Completes MCA Section 8 Incorporations',
+          category: 'Statutory Transparency',
+          summary: 'The Foundation confirms full compliance with Section 8 rules, non-profit incorporation, and PAN/TAN issuance.',
+          content: '<p>The Central Registration Centre, Ministry of Corporate Affairs has granted the Certificate of Incorporation for RI8WIN NOBEL PATH FOUNDATION (CIN: U88900MH2026NPL481549). All statutory details are published transparently on our online portal.</p>',
+          image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?w=800',
+          published_date: '25 October 2026',
+          views: 215
+        }
+      ],
+      custom_pages: [
+        {
+          slug: 'csr-partnerships',
+          title: 'CSR Partnerships & Institutional Alliances',
+          subtitle: 'Collaborate with an authentic Section 8 company for verified grassroots impact',
+          navbar_label: 'CSR Alliances',
+          content: `
+            <div class="space-y-4 text-xs leading-relaxed text-gray-700">
+              <p class="text-sm font-semibold text-sky-900">RI8WIN NOBEL PATH FOUNDATION collaborates with corporate entities, institutional donors, and public sector organizations under statutory Schedule VII Corporate Social Responsibility (CSR) provisions of the Companies Act, 2013.</p>
+              <h4 class="font-bold text-gray-900 text-sm">Key Focus Areas for CSR Deployments:</h4>
+              <ul class="list-disc pl-5 space-y-1.5">
+                <li><strong>Free Digital Education & STEM Labs:</strong> Installing smart classrooms in underprivileged rural schools.</li>
+                <li><strong>Preventive Healthcare & Mobile Medical Screening:</strong> Reaching tribal and low-income settlements with medical checkup camps.</li>
+                <li><strong>Urban & Rural Afforestation:</strong> Native biodiversity plantations with audited geotagged tree tracking.</li>
+                <li><strong>Empowerment of Rural Women:</strong> Self-help group livelihood training and digital micro-entrepreneurship.</li>
+              </ul>
+              <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 mt-4">
+                <div class="font-bold text-sky-900">Partner With Our Foundation</div>
+                <p class="text-sky-700 mt-1">For CSR partnerships and grant allocations, contact our directorate at <strong>contact@ri8winnobelpath.org</strong> or call <strong>+91 8691016082</strong>.</p>
+              </div>
+            </div>
+          `
+        }
+      ],
+      programs: [
+        { id: 1, title: 'Youth Skill Accelerator & Digital Literacy', category: 'Education and Youth', description: 'Vocational digital training, career mentorship, and ethical leadership development for underprivileged students.', image_url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800' },
+        { id: 2, title: 'Preventive Health Camps & Nutrition Drive', category: 'Health and Community Welfare', description: 'Preventive health check-ups, clean drinking water awareness, and malnutrition relief in rural clusters.', image_url: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800' },
+        { id: 3, title: 'Community Afforestation & Circular Waste Action', category: 'Environment and Agriculture', description: 'Tree plantation, sustainable organic agriculture techniques, and circular economy recycling campaigns.', image_url: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800' },
+        { id: 4, title: 'Rural Women Micro-Entrepreneurship Hub', category: 'Women and Rural Empowerment', description: 'Self-help group skill building, financial literacy, and livelihood workshops empowering village women.', image_url: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800' }
+      ],
+      volunteers: [
+        { id: 1, ref: 'APP-2026-00001', name: 'Aarav Sharma', email: 'aarav.sharma@example.com', mobile: '+91 98111 22233', city: 'Navi Mumbai', state: 'Maharashtra', occupation: 'Software Engineer', interests: 'Education and Youth', status: 'Approved', membership_id: 'RI8V-2026-00001' },
+        { id: 2, ref: 'APP-2026-00002', name: 'Priya Patel', email: 'priya.patel@example.com', mobile: '+91 98222 33344', city: 'Nagpur', state: 'Maharashtra', occupation: 'Student', interests: 'Environment and Agriculture', status: 'Approved', membership_id: 'RI8V-2026-00002' }
+      ],
+      certificates: [
+        { id: 1, certificate_number: 'CERT-RI8V-2026-00001', membership_id: 'RI8V-2026-00001', volunteer_name: 'Aarav Sharma', certificate_type: 'Volunteer Service Certificate', role_title: 'Volunteer Member', tenure_or_hours: '100+ Hours Community Service', issue_date: '10 October 2026', status: 'Issued', authorized_signatory: 'Ms. Shilpa Sunil Umare & Ms. Sarika Uttamchand Wakde, Directors' },
+        { id: 2, certificate_number: 'CERT-HON-RI8-2026-1001', membership_id: 'RI8-EXEC-2026-1001', volunteer_name: 'Dr. Rameshwar V. Deshmukh', certificate_type: 'Honorary Member Certificate', role_title: 'Vice President (Community Health)', tenure_or_hours: 'Annual Honorary Term 2026-2027', issue_date: '06 October 2026', status: 'Issued', authorized_signatory: 'Ms. Shilpa Sunil Umare & Ms. Sarika Uttamchand Wakde, Directors' }
+      ],
+      official_letters: [
+        {
+          id: 1,
+          reference_number: 'RI8WIN/HON/2026/001',
+          letter_type: 'Honorary Appointment Letter (Section 8 Compliant)',
+          recipient_name: 'Dr. Rameshwar V. Deshmukh',
+          recipient_role: 'Vice President (Honorary)',
+          recipient_address: 'Navi Mumbai, Maharashtra',
+          letter_title: 'CONFIRMATION OF APPOINTMENT AS HONORARY VICE PRESIDENT',
+          letter_body: 'We are pleased to confirm your appointment as Honorary Vice President (Community Health & Rural Medicine) of RI8WIN NOBEL PATH FOUNDATION.\n\nIn strict compliance with Section 8 of the Companies Act, 2013, this appointment is purely honorary, carrying zero salary, commission, or financial remuneration. Your voluntary expertise will guide our rural healthcare outreach.',
+          issue_date: '06 October 2026',
+          authorized_signatory: 'Ms. Shilpa Sunil Umare & Ms. Sarika Uttamchand Wakde, Directors'
+        }
+      ],
+      donations: [
+        {
+          id: 1,
+          receipt_number: 'RI8-DON-2026-10042',
+          donor_name: 'Rajesh Kumar Mehta',
+          donor_email: 'rajesh.mehta@example.com',
+          donor_phone: '+91 98201 12345',
+          donor_pan: 'ABCDE1234F',
+          donor_address: 'Andheri West, Mumbai, Maharashtra',
+          amount: 5000,
+          cause: 'Free Digital Literacy Lab for Children',
+          payment_method: 'UPI',
+          transaction_ref: 'UPI/2026/9871234501',
+          date: '25 October 2026',
+          status: 'Completed'
+        }
+      ]
+    };
+
+    function getStore() {
+      const stored = localStorage.getItem('ri8win_hercules_db');
+      if (!stored) {
+        localStorage.setItem('ri8win_hercules_db', JSON.stringify(DEFAULT_DATA));
+        return DEFAULT_DATA;
+      }
+      try { return JSON.parse(stored); } catch(e) { return DEFAULT_DATA; }
+    }
+
+    function saveStore(data) {
+      localStorage.setItem('ri8win_hercules_db', JSON.stringify(data));
+    }
+
+    let currentUser = null;
+
+    function showToast(msg, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const bg = type === 'success' ? 'bg-[#0369a1]' : 'bg-red-700';
+      toast.className = `${bg} text-white px-4 py-3 rounded-xl shadow-xl text-xs font-semibold flex items-center justify-between gap-3 animate-fade-in`;
+      toast.innerHTML = `<span>${msg}</span><button onclick="this.parentElement.remove()" class="text-white/80 hover:text-white">✕</button>`;
+      container.appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function openGenericModal(html) {
+      const m = document.getElementById('generic-modal');
+      const body = document.getElementById('generic-modal-body');
+      body.innerHTML = html;
+      m.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeGenericModal() {
+      document.getElementById('generic-modal').classList.add('hidden');
+    }
+
+    // Hash Router
+    function navigate() {
+      const hash = window.location.hash || '#home';
+      const cleanHash = hash.replace('#', '');
+      const parts = cleanHash.split('/');
+      const route = parts[0] || 'home';
+      const slug = parts[1] || '';
+      const root = document.getElementById('app-root');
+
+      window.scrollTo(0, 0);
+
+      if (route === 'home') renderHome(root);
+      else if (route === 'about') renderAbout(root);
+      else if (route === 'objectives') renderObjectives(root);
+      else if (route === 'programs') renderPrograms(root);
+      else if (route === 'news') renderNews(root, slug);
+      else if (route === 'donate') renderDonate(root);
+      else if (route === 'page') renderCustomPage(root, slug);
+      else if (route === 'volunteer-register') renderVolunteerRegister(root);
+      else if (route === 'verify') renderVerify(root);
+      else if (route === 'transparency') renderTransparency(root);
+      else if (route === 'contact') renderContact(root);
+      else if (route === 'admin') renderAdminDashboard(root);
+      else renderHome(root);
+
+      lucide.createIcons();
+    }
+
+    window.addEventListener('hashchange', navigate);
+    window.addEventListener('DOMContentLoaded', navigate);
+
+    /* --- PAGE RENDERERS --- */
+
+    // 1. Home Page
+    function renderHome(root) {
+      const data = getStore();
+      const s = data.settings;
+      root.innerHTML = `
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#082f49] text-white py-16 md:py-24 px-4 overflow-hidden">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-900/70 border border-sky-400/40 text-sky-200 text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                ${s.meaning}
+              </div>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                ${s.hero_title}
+              </h1>
+              <p class="text-base sm:text-lg text-sky-100/90 font-light leading-relaxed">
+                ${s.hero_subtitle}
+              </p>
+              <div class="flex flex-wrap gap-3.5 pt-2">
+                <a href="#donate" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-xs shadow-lg transition flex items-center gap-2">
+                  <span>💚</span> Donate Online (80G Benefit) &rarr;
+                </a>
+                <a href="#volunteer-register" class="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs shadow-md transition">
+                  Become a Volunteer &rarr;
+                </a>
+                <a href="#verify" class="px-6 py-3 rounded-xl bg-sky-950/80 hover:bg-sky-900 text-sky-200 border border-sky-700/60 font-semibold text-xs transition">
+                  Verify Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 space-y-4">
+              ${s.hero_image_url ? `
+                <div class="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl group max-h-56">
+                  <img src="${s.hero_image_url}" alt="NGO Activities" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                    <span class="text-xs font-semibold text-amber-300 flex items-center gap-1.5 bg-black/50 px-3 py-1 rounded-full backdrop-blur-xs">
+                      <span>🌱</span> Grassroots Community Action
+                    </span>
+                  </div>
+                </div>
+              ` : ''}
+
+              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl space-y-4 text-white">
+                <div class="flex items-center gap-3 border-b border-white/10 pb-3">
+                  <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center font-bold text-lg">R8</div>
+                  <div>
+                    <h3 class="font-bold text-sm leading-tight">${s.legal_name}</h3>
+                    <p class="text-[11px] text-sky-300">Registered Section 8 Non-Profit Co. (MCA India)</p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3 text-center text-xs">
+                  <div class="p-3 rounded-xl bg-black/20 border border-white/5">
+                    <div class="text-lg font-bold text-amber-300">Section 8</div>
+                    <div class="text-gray-300 text-[11px]">Non-Profit India</div>
+                  </div>
+                  <div class="p-3 rounded-xl bg-black/20 border border-white/5">
+                    <div class="text-lg font-bold text-sky-300">Pan-India</div>
+                    <div class="text-gray-300 text-[11px]">Nationwide Scope</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Impact Statistics Counter Bar -->
+        <div class="bg-gradient-to-r from-sky-950 via-slate-900 to-sky-950 border-b border-sky-900 text-white py-6 px-4">
+          <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-xs">
+            <div>
+              <div class="text-2xl font-black text-amber-400">100+</div>
+              <div class="text-slate-400 mt-1">Dedicated Volunteers</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-sky-400">12+</div>
+              <div class="text-slate-400 mt-1">Villages & Clusters</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-emerald-400">1,500+</div>
+              <div class="text-slate-400 mt-1">Community Beneficiaries</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-teal-400">500+</div>
+              <div class="text-slate-400 mt-1">Saplings Planted</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest News & Activities Showcase -->
+        <section class="py-14 px-4 bg-white border-b border-gray-200">
+          <div class="max-w-7xl mx-auto space-y-8">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-sky-700 uppercase tracking-wider">Field Initiatives</span>
+                <h2 class="text-2xl font-extrabold text-slate-900">Latest Ground Activities & News</h2>
+              </div>
+              <a href="#news" class="text-xs font-bold text-[#0369a1] hover:underline flex items-center gap-1">
+                View All News &rarr;
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              ${data.news.slice(0, 3).map(n => `
+                <div class="bg-stone-50 rounded-2xl border border-stone-200 overflow-hidden shadow-xs hover:shadow-md transition flex flex-col">
+                  <img src="${n.image}" alt="${n.title}" class="h-44 w-full object-cover"/>
+                  <div class="p-5 flex-1 flex flex-col justify-between space-y-3 text-xs">
+                    <div>
+                      <span class="px-2 py-0.5 rounded bg-sky-100 text-sky-800 font-bold text-[10px] uppercase">${n.category}</span>
+                      <h3 class="font-bold text-sm text-slate-900 mt-2 leading-snug">${n.title}</h3>
+                      <p class="text-gray-600 mt-1.5 line-clamp-2">${n.summary}</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-2 border-t border-gray-200 text-gray-500 text-[11px]">
+                      <span>${n.published_date}</span>
+                      <a href="#news/${n.slug}" class="font-bold text-sky-700 hover:text-sky-900">Read Story &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    // 2. Donation Portal Page
+    function renderDonate(root) {
+      const data = getStore();
+      const s = data.settings;
+      root.innerHTML = `
+        <div class="max-w-5xl mx-auto px-4 py-12 space-y-8">
+          <div class="text-center space-y-2">
+            <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+              Section 80G Tax Exemption Eligible
+            </span>
+            <h1 class="text-3xl font-extrabold text-slate-900">Support Our Grassroots Charitable Mission</h1>
+            <p class="text-xs text-gray-600 max-w-2xl mx-auto">
+              Your contribution fuels free digital literacy for rural children, preventive medical checkups, and mass afforestation across Maharashtra.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left: Donation Form -->
+            <div class="lg:col-span-7 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-6 text-xs">
+              <div>
+                <label class="block font-bold text-slate-900 mb-2">1. Select Contribution Amount (INR)</label>
+                <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+                  <button type="button" onclick="setDonateAmount(500)" class="amt-btn py-2 rounded-xl border border-gray-300 font-bold hover:border-sky-600 focus:bg-sky-50 focus:border-sky-600">₹500</button>
+                  <button type="button" onclick="setDonateAmount(1000)" class="amt-btn py-2 rounded-xl border border-gray-300 font-bold hover:border-sky-600 focus:bg-sky-50 focus:border-sky-600 bg-sky-50 border-sky-600">₹1,000</button>
+                  <button type="button" onclick="setDonateAmount(2500)" class="amt-btn py-2 rounded-xl border border-gray-300 font-bold hover:border-sky-600 focus:bg-sky-50 focus:border-sky-600">₹2,500</button>
+                  <button type="button" onclick="setDonateAmount(5000)" class="amt-btn py-2 rounded-xl border border-gray-300 font-bold hover:border-sky-600 focus:bg-sky-50 focus:border-sky-600">₹5,000</button>
+                  <button type="button" onclick="setDonateAmount(10000)" class="amt-btn py-2 rounded-xl border border-gray-300 font-bold hover:border-sky-600 focus:bg-sky-50 focus:border-sky-600">₹10,000</button>
+                </div>
+                <div class="mt-2.5">
+                  <input type="number" id="custom-donate-amount" value="1000" oninput="updateQrCode()" class="w-full p-2.5 rounded-xl border border-gray-300 font-bold text-slate-900" placeholder="Or enter custom amount in ₹"/>
+                </div>
+              </div>
+
+              <form onsubmit="handleDonationSubmit(event)" class="space-y-4">
+                <div class="font-bold text-slate-900 border-b pb-2">2. Donor Information (For 80G Official Receipt)</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block font-semibold mb-1">Full Legal Name *</label>
+                    <input type="text" name="donor_name" class="w-full p-2.5 rounded-lg border border-gray-300" placeholder="e.g. Rajesh Mehta" required/>
+                  </div>
+                  <div>
+                    <label class="block font-semibold mb-1">Email Address *</label>
+                    <input type="email" name="donor_email" class="w-full p-2.5 rounded-lg border border-gray-300" placeholder="rajesh@example.com" required/>
+                  </div>
+                  <div>
+                    <label class="block font-semibold mb-1">Mobile Number *</label>
+                    <input type="tel" name="donor_phone" class="w-full p-2.5 rounded-lg border border-gray-300" placeholder="+91 98200 00000" required/>
+                  </div>
+                  <div>
+                    <label class="block font-semibold mb-1">PAN Card Number *</label>
+                    <input type="text" name="donor_pan" class="w-full p-2.5 rounded-lg border border-gray-300 uppercase font-mono" placeholder="ABCDE1234F" required/>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label class="block font-semibold mb-1">Residential Address *</label>
+                    <input type="text" name="donor_address" class="w-full p-2.5 rounded-lg border border-gray-300" placeholder="City, State, PIN" required/>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block font-semibold mb-1">UPI / IMPS Transaction Reference Number *</label>
+                  <input type="text" name="txn_ref" class="w-full p-2.5 rounded-lg border border-gray-300 font-mono" placeholder="e.g. 12-digit UPI reference ID or UTR number" required/>
+                </div>
+
+                <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-900 space-y-1">
+                  <strong>Statutory 80G Tax Exemption Note:</strong>
+                  <p>${s.donation_80g_note}</p>
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition shadow-md flex items-center justify-center gap-2">
+                  <span>📑</span> Submit Donation & Generate 80G Receipt
+                </button>
+              </form>
+            </div>
+
+            <!-- Right: Dynamic UPI QR Code & Bank Transfer Details -->
+            <div class="lg:col-span-5 space-y-4">
+              <!-- UPI QR Card -->
+              <div class="bg-gradient-to-br from-sky-50 to-white p-6 rounded-2xl border border-sky-200 shadow-sm text-center space-y-4 text-xs">
+                <div>
+                  <span class="text-[10px] font-bold text-sky-800 bg-sky-100 px-2 py-0.5 rounded-full uppercase">Instant UPI Payment</span>
+                  <h3 class="text-sm font-bold text-slate-900 mt-1">Scan Official QR Code with Any App</h3>
+                  <p class="text-gray-500 text-[11px]">GPay, PhonePe, Paytm, BHIM UPI</p>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl border border-gray-200 inline-block shadow-inner">
+                  <div id="donate-qrcode" class="w-48 h-48 mx-auto flex items-center justify-center"></div>
+                </div>
+
+                <div class="space-y-1">
+                  <div class="text-xs text-gray-500">Official Foundation UPI VPA:</div>
+                  <div class="font-mono font-bold text-sm text-sky-900 bg-sky-100/70 py-1.5 px-3 rounded-lg inline-block border border-sky-200">
+                    ${s.donation_upi_id}
+                  </div>
+                  <div class="text-[11px] text-emerald-700 font-semibold pt-1">Verified Payee: ${s.donation_account_name}</div>
+                </div>
+              </div>
+
+              <!-- Bank Account Card -->
+              <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm text-xs space-y-3">
+                <div class="font-bold text-slate-900 flex items-center gap-1.5 border-b pb-2">
+                  <span>🏦</span> Direct Bank Transfer (NEFT / RTGS / IMPS)
+                </div>
+                <div class="space-y-1.5 text-gray-700">
+                  <div class="flex justify-between"><span class="text-gray-500">Bank Name:</span> <strong>${s.donation_bank_name}</strong></div>
+                  <div class="flex justify-between"><span class="text-gray-500">Account Name:</span> <strong>${s.donation_account_name}</strong></div>
+                  <div class="flex justify-between"><span class="text-gray-500">Account Number:</span> <strong class="font-mono">${s.donation_account_number}</strong></div>
+                  <div class="flex justify-between"><span class="text-gray-500">IFSC Code:</span> <strong class="font-mono text-sky-800">${s.donation_ifsc}</strong></div>
+                  <div class="flex justify-between"><span class="text-gray-500">Branch:</span> <span>${s.donation_branch}</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      `;
+      setTimeout(updateQrCode, 50);
+    }
+
+    function setDonateAmount(amt) {
+      document.getElementById('custom-donate-amount').value = amt;
+      updateQrCode();
+    }
+
+    function updateQrCode() {
+      const container = document.getElementById('donate-qrcode');
+      if (!container) return;
+      container.innerHTML = '';
+      const data = getStore();
+      const amt = document.getElementById('custom-donate-amount')?.value || 1000;
+      const upiUrl = `upi://pay?pa=${encodeURIComponent(data.settings.donation_upi_id)}&pn=${encodeURIComponent(data.settings.donation_account_name)}&am=${amt}&cu=INR&tn=Charitable%20Donation`;
+      new QRCode(container, {
+        text: upiUrl,
+        width: 192,
+        height: 192,
+        colorDark: "#0c4a6e",
+        colorLight: "#ffffff"
+      });
+    }
+
+    function handleDonationSubmit(e) {
+      e.preventDefault();
+      const f = e.target;
+      const data = getStore();
+      const amt = Number(document.getElementById('custom-donate-amount')?.value) || 1000;
+      const receiptNum = `RI8-DON-2026-${Math.floor(10000 + Math.random() * 90000)}`;
+
+      const newDonation = {
+        id: Date.now(),
+        receipt_number: receiptNum,
+        donor_name: f.donor_name.value.trim(),
+        donor_email: f.donor_email.value.trim(),
+        donor_phone: f.donor_phone.value.trim(),
+        donor_pan: f.donor_pan.value.trim().toUpperCase(),
+        donor_address: f.donor_address.value.trim(),
+        amount: amt,
+        cause: 'General Charitable Corpus',
+        payment_method: 'UPI / Bank Transfer',
+        transaction_ref: f.txn_ref.value.trim(),
+        date: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }),
+        status: 'Completed'
+      };
+
+      data.donations.push(newDonation);
+      saveStore(data);
+      showToast('Donation recorded! Official 80G receipt generated.');
+      openDonationReceiptModal(newDonation);
+      f.reset();
+    }
+
+    function openDonationReceiptModal(d) {
+      const data = getStore();
+      const s = data.settings;
+      const html = `
+        <div id="printable-modal-content" class="p-6 bg-white space-y-6">
+          <div class="border-b-2 border-sky-800 pb-4 flex justify-between items-start gap-4">
+            <div>
+              <div class="text-xs font-bold text-sky-800 uppercase tracking-widest">Official Statutory Donation Receipt</div>
+              <h2 class="text-lg font-black text-slate-900">${s.legal_name}</h2>
+              <div class="text-[11px] text-gray-500">Registered Section 8 Non-Profit Company (Companies Act, 2013)</div>
+              <div class="text-[11px] text-gray-500">CIN: <strong>${s.cin}</strong> | PAN: <strong>${s.pan}</strong> | TAN: <strong>${s.tan}</strong></div>
+              <div class="text-[10px] text-gray-500">${s.registered_office}</div>
+            </div>
+            <div class="text-right">
+              <span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-bold text-xs uppercase">80G Tax Exempt</span>
+              <div class="text-xs font-mono font-bold text-slate-800 mt-2">Receipt #: ${d.receipt_number}</div>
+              <div class="text-[11px] text-gray-500">Date: ${d.date}</div>
+            </div>
+          </div>
+
+          <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 grid grid-cols-2 gap-3 text-xs">
+            <div><span class="text-gray-500">Received With Thanks From:</span><br/><strong class="text-sm text-slate-900">${d.donor_name}</strong></div>
+            <div><span class="text-gray-500">Donor PAN:</span><br/><strong class="font-mono text-sm text-sky-900">${d.donor_pan}</strong></div>
+            <div><span class="text-gray-500">Donor Email:</span><br/>${d.donor_email}</div>
+            <div><span class="text-gray-500">Donor Phone:</span><br/>${d.donor_phone}</div>
+            <div class="col-span-2"><span class="text-gray-500">Address:</span><br/>${d.donor_address}</div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl overflow-hidden text-xs">
+            <table class="w-full text-left">
+              <thead class="bg-sky-900 text-white">
+                <tr><th class="p-2.5">Description / Charitable Corpus</th><th class="p-2.5 text-right">Amount (INR)</th></tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="p-3">
+                    <strong>Voluntary Charitable Contribution</strong>
+                    <div class="text-[11px] text-gray-500">Applied 100% towards education, preventive health, and environmental sustainability.</div>
+                    <div class="text-[10px] text-gray-400 mt-1">Payment Method: ${d.payment_method} | Txn Ref: ${d.transaction_ref}</div>
+                  </td>
+                  <td class="p-3 text-right font-bold text-sm text-slate-900">₹${Number(d.amount).toLocaleString('en-IN')}.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-900 space-y-1">
+            <strong>Tax Exemption Declaration:</strong>
+            <p>Donations to RI8WIN NOBEL PATH FOUNDATION are eligible for tax deduction under Section 80G of the Income Tax Act, 1961. This electronically generated receipt is valid without physical seal.</p>
+          </div>
+
+          <div class="flex justify-between items-end pt-4 border-t border-gray-200">
+            <div class="text-[10px] text-gray-400">Computer-generated official receipt • RI8WIN NOBEL PATH FOUNDATION</div>
+            <div class="text-center">
+              <div class="font-serif italic font-bold text-sky-900">Shilpa Sunil Umare & Sarika Uttamchand Wakde</div>
+              <div class="text-[10px] text-gray-500">Authorized Signatory / Directors</div>
+            </div>
+          </div>
+
+          <div class="flex justify-end gap-3 pt-2 no-print">
+            <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-sky-700 text-white font-bold text-xs shadow hover:bg-sky-800 transition flex items-center gap-1.5">
+              <span>🖨️</span> Print Official Receipt
+            </button>
+          </div>
+        </div>
+      `;
+      openGenericModal(html);
+    }
+
+    // 3. News & Activities Section
+    function renderNews(root, slug) {
+      const data = getStore();
+      if (slug) {
+        const article = data.news.find(n => n.slug === slug);
+        if (!article) {
+          root.innerHTML = `<div class="max-w-4xl mx-auto py-16 px-4 text-center">Article not found. <a href="#news" class="text-sky-600 font-bold">Return to News</a></div>`;
+          return;
+        }
+        root.innerHTML = `
+          <div class="max-w-4xl mx-auto px-4 py-12 space-y-6">
+            <a href="#news" class="text-xs font-bold text-[#0369a1] hover:underline flex items-center gap-1">&larr; Back to All News & Activities</a>
+            <span class="px-3 py-1 rounded bg-sky-100 text-sky-800 font-bold text-xs uppercase">${article.category}</span>
+            <h1 class="text-3xl font-extrabold text-slate-900 leading-tight">${article.title}</h1>
+            <div class="flex items-center gap-4 text-xs text-gray-500 border-b pb-4">
+              <span>Published: ${article.published_date}</span>
+              <span>•</span>
+              <span>RI8WIN Foundation Press</span>
+            </div>
+            <img src="${article.image}" alt="${article.title}" class="w-full h-80 object-cover rounded-2xl shadow-md"/>
+            <div class="prose max-w-none text-sm text-gray-700 leading-relaxed space-y-4 pt-4">
+              ${article.content}
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      root.innerHTML = `
+        <div class="max-w-7xl mx-auto px-4 py-12 space-y-8">
+          <div class="text-center space-y-2">
+            <span class="text-xs font-bold text-sky-700 uppercase tracking-widest">Impact In Action</span>
+            <h1 class="text-3xl font-extrabold text-slate-900">News, Publications & Field Activities</h1>
+            <p class="text-xs text-gray-600 max-w-xl mx-auto">Explore authentic photo reports and documentation of our community interventions across education, health, and environment.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            ${data.news.map(n => `
+              <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs hover:shadow-md transition flex flex-col">
+                <img src="${n.image}" alt="${n.title}" class="h-48 w-full object-cover"/>
+                <div class="p-5 flex-1 flex flex-col justify-between space-y-3 text-xs">
+                  <div>
+                    <span class="px-2 py-0.5 rounded bg-sky-50 text-sky-800 font-bold text-[10px] uppercase border border-sky-200">${n.category}</span>
+                    <h3 class="font-bold text-sm text-slate-900 mt-2 leading-snug">${n.title}</h3>
+                    <p class="text-gray-600 mt-1.5 line-clamp-3">${n.summary}</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-3 border-t border-gray-100 text-gray-500 text-[11px]">
+                    <span>${n.published_date}</span>
+                    <a href="#news/${n.slug}" class="font-bold text-sky-700 hover:text-sky-900">Full Article &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    // 4. Custom Page Renderer
+    function renderCustomPage(root, slug) {
+      const data = getStore();
+      const page = data.custom_pages.find(p => p.slug === slug);
+      if (!page) {
+        root.innerHTML = `<div class="max-w-4xl mx-auto py-16 px-4 text-center">Webpage not found. <a href="#home" class="text-sky-600 font-bold">Return Home</a></div>`;
+        return;
+      }
+      root.innerHTML = `
+        <div class="max-w-4xl mx-auto px-4 py-12 space-y-6">
+          <div class="border-b pb-4">
+            <span class="text-xs font-bold text-sky-700 uppercase tracking-widest">RI8WIN Official Publication</span>
+            <h1 class="text-3xl font-extrabold text-slate-900 mt-1">${page.title}</h1>
+            <p class="text-sm text-gray-600 mt-1">${page.subtitle}</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm leading-relaxed text-gray-800">
+            ${page.content}
+          </div>
+        </div>
+      `;
+    }
+
+    // 5. About Us Page (With Executive Section 8 Honorary Members)
+    function renderAbout(root) {
+      const data = getStore();
+      const s = data.settings;
+      root.innerHTML = `
+        <div class="max-w-7xl mx-auto px-4 py-12 space-y-12">
+          <div class="text-center space-y-3 max-w-3xl mx-auto">
+            <span class="text-xs font-bold text-sky-700 uppercase tracking-widest">Organizational Identity</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">About RI8WIN NOBEL PATH FOUNDATION</h1>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Incorporated under Section 8 of the Companies Act, 2013, our entire purpose is social welfare, educational empowerment, preventive health awareness, and environmental conservation.
+            </p>
+          </div>
+
+          <!-- Governing Body / Directors -->
+          <div class="space-y-6">
+            <div class="border-b pb-2">
+              <h2 class="text-xl font-bold text-slate-900">Governing Body / Board of Directors</h2>
+              <p class="text-xs text-gray-500">Founding Directors incorporated with the Central Registration Centre, Ministry of Corporate Affairs, Government of India.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${s.governing_body.filter(d => d.visible !== false).map(d => `
+                <div class="p-6 bg-white rounded-2xl border border-gray-200 shadow-xs flex flex-col sm:flex-row gap-5 items-center sm:items-start text-xs">
+                  <img src="${d.photo}" alt="${d.name}" class="w-24 h-24 rounded-2xl object-cover shadow-sm shrink-0 border border-gray-200"/>
+                  <div class="space-y-1 text-center sm:text-left">
+                    <span class="text-[10px] font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">Board Member</span>
+                    <h3 class="text-base font-bold text-slate-900 mt-1">${d.name}</h3>
+                    <p class="font-semibold text-sky-800">${d.role}</p>
+                    <p class="text-gray-500">${d.qualification}</p>
+                    <p class="text-gray-500">${d.location}</p>
+                    <div class="pt-2 text-[11px] text-gray-400">Section 8 Non-Profit Director • Serving without remuneration or profit distribution</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Executive Office Bearers & Section 8 Honorary Members -->
+          <div class="space-y-6">
+            <div class="border-b pb-2">
+              <h2 class="text-xl font-bold text-slate-900">Executive Members & Honorary Office Bearers</h2>
+              <p class="text-xs text-gray-500">Distinguished professionals appointed in an honorary capacity under Section 8 rules (without salary or financial remuneration).</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              ${s.executive_members.filter(m => m.visible !== false).map(m => `
+                <div class="p-5 bg-white rounded-2xl border border-gray-200 shadow-xs space-y-3 text-xs flex flex-col justify-between">
+                  <div>
+                    <span class="text-[10px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">Honorary Member (Sec. 8)</span>
+                    <h3 class="text-sm font-bold text-slate-900 mt-2">${m.name}</h3>
+                    <p class="font-semibold text-sky-800 text-[11px]">${m.role}</p>
+                    <div class="text-[10px] font-mono text-gray-500 mt-1">ID: ${m.membership_id}</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-stone-50 border border-stone-200 text-[10px] text-gray-600 italic">
+                    "${m.honorary_terms}"
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // 6. Verify Certificate Page
+    function renderVerify(root) {
+      root.innerHTML = `
+        <div class="max-w-3xl mx-auto px-4 py-12 space-y-8">
+          <div class="text-center space-y-2">
+            <span class="text-xs font-bold text-sky-700 uppercase tracking-widest">Public Verification</span>
+            <h1 class="text-3xl font-extrabold text-slate-900">Verify Official Foundation Certificate</h1>
+            <p class="text-xs text-gray-600">Enter a certificate number or membership ID to verify its authentic record on the official MCA Section 8 registry.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4 text-xs">
+            <div class="flex gap-2">
+              <input type="text" id="verify-input" placeholder="e.g. CERT-RI8V-2026-00001 or CERT-HON-RI8-2026-1001" class="flex-1 p-3 rounded-xl border border-gray-300 font-mono text-sm uppercase"/>
+              <button onclick="handleVerifyCert()" class="px-6 py-3 rounded-xl bg-[#0369a1] hover:bg-sky-800 text-white font-bold transition">
+                Verify Now
+              </button>
+            </div>
+            <div id="verify-result"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    function handleVerifyCert() {
+      const code = document.getElementById('verify-input').value.trim().toUpperCase();
+      const resDiv = document.getElementById('verify-result');
+      if (!code) return;
+
+      const data = getStore();
+      const cert = data.certificates.find(c => c.certificate_number.toUpperCase() === code || c.membership_id.toUpperCase() === code);
+
+      if (cert) {
+        resDiv.innerHTML = `
+          <div class="p-5 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-950 space-y-3 mt-4">
+            <div class="flex items-center gap-2 font-bold text-sm text-emerald-800">
+              <span>✅</span> OFFICIAL CERTIFICATE VERIFIED (AUTHENTIC RECORD)
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div><span class="text-gray-500">Recipient Name:</span><br/><strong>${cert.volunteer_name}</strong></div>
+              <div><span class="text-gray-500">Certificate Type:</span><br/><strong>${cert.certificate_type || 'Volunteer Service'}</strong></div>
+              <div><span class="text-gray-500">Role / Designation:</span><br/><strong>${cert.role_title || 'Volunteer'}</strong></div>
+              <div><span class="text-gray-500">Issue Date:</span><br/><strong>${cert.issue_date}</strong></div>
+              <div><span class="text-gray-500">Membership ID:</span><br/><strong class="font-mono">${cert.membership_id}</strong></div>
+              <div><span class="text-gray-500">Certificate Number:</span><br/><strong class="font-mono">${cert.certificate_number}</strong></div>
+            </div>
+            <div class="pt-2 text-[11px] text-emerald-900 border-t border-emerald-200">
+              Issued under statutory authority of <strong>RI8WIN NOBEL PATH FOUNDATION</strong> (CIN: U88900MH2026NPL481549).
+            </div>
+            <button onclick='printDirectCert(${JSON.stringify(cert)})' class="px-4 py-2 rounded-lg bg-sky-700 text-white font-bold text-xs hover:bg-sky-800 transition">
+              View & Print Certificate
+            </button>
+          </div>
+        `;
+      } else {
+        resDiv.innerHTML = `
+          <div class="p-4 bg-red-50 rounded-xl border border-red-200 text-red-800 text-xs mt-4">
+            ❌ <strong>No Record Found:</strong> The certificate number <code>${code}</code> does not match any official record of RI8WIN NOBEL PATH FOUNDATION.
+          </div>
+        `;
+      }
+    }
+
+    // 7. Printable Certificate Modal
+    function printDirectCert(cert) {
+      const data = getStore();
+      const s = data.settings;
+      const html = `
+        <div id="printable-modal-content" class="p-8 bg-white border-8 border-sky-900 rounded-2xl space-y-6 text-center text-xs relative overflow-hidden" style="background-image: radial-gradient(#0284c7 0.5px, transparent 0.5px); background-size: 20px 20px;">
+          <div class="border-4 border-amber-500/60 p-8 rounded-xl space-y-6">
+            <div class="flex items-center justify-between border-b pb-3">
+              <div class="text-left">
+                <div class="text-xs font-bold text-sky-800 tracking-widest uppercase">Government of India • Ministry of Corporate Affairs</div>
+                <div class="text-[10px] text-gray-500">CIN: <strong>${s.cin}</strong> | Section 8 Non-Profit Co.</div>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-sky-900 text-white font-black text-xl flex items-center justify-center">R8</div>
+            </div>
+
+            <div class="space-y-1">
+              <h2 class="cinzel text-xl sm:text-2xl font-black text-sky-950 tracking-wider">RI8WIN NOBEL PATH FOUNDATION</h2>
+              <p class="text-xs text-amber-700 font-semibold tracking-wide uppercase">${cert.certificate_type || 'Certificate of Recognition & Service'}</p>
+            </div>
+
+            <p class="text-xs italic text-gray-600">This official honorary credential is proudly conferred upon</p>
+            <h3 class="text-2xl font-black text-slate-900 font-serif border-b-2 border-sky-900 inline-block px-8 pb-1">${cert.volunteer_name}</h3>
+
+            <p class="text-xs text-gray-700 max-w-lg mx-auto leading-relaxed">
+              in recognition of exemplary and voluntary dedication as <strong>${cert.role_title || 'Honorary Volunteer'}</strong> for the promotion of free education, preventive health, and environmental conservation under the Noble RI8 framework.
+            </p>
+
+            <div class="grid grid-cols-3 gap-2 pt-4 border-t border-gray-200 text-left text-[11px] text-gray-600">
+              <div><span>Cert No:</span> <strong class="font-mono">${cert.certificate_number}</strong></div>
+              <div><span>Member ID:</span> <strong class="font-mono">${cert.membership_id}</strong></div>
+              <div><span>Date of Issue:</span> <strong>${cert.issue_date}</strong></div>
+            </div>
+
+            <div class="flex justify-between items-end pt-6 border-t border-gray-200">
+              <div class="text-left text-[10px] text-gray-400">
+                Verify Online: ri8win.org/#verify<br/>
+                Section 8 Honorary Service
+              </div>
+              <div class="text-center">
+                <div class="font-serif italic font-bold text-sky-900 text-xs">Shilpa S. Umare & Sarika U. Wakde</div>
+                <div class="text-[10px] text-gray-500 font-semibold">Board of Directors</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 no-print flex justify-end">
+            <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-sky-800 text-white font-bold hover:bg-sky-900 transition flex items-center gap-1.5">
+              <span>🖨️</span> Print Official Certificate
+            </button>
+          </div>
+        </div>
+      `;
+      openGenericModal(html);
+    }
+
+    // 8. Other Static Pages
+    function renderObjectives(root) {
+      root.innerHTML = `
+        <div class="max-w-5xl mx-auto px-4 py-12 space-y-8 text-xs">
+          <div class="text-center space-y-2">
+            <span class="text-xs font-bold text-sky-700 uppercase tracking-widest">Statutory Mandate</span>
+            <h1 class="text-3xl font-extrabold text-slate-900">Official Section 8 Objectives</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Framed pursuant to Section 8(1) of the Companies Act, 2013 and approved by the Ministry of Corporate Affairs, Government of India.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3 leading-relaxed text-gray-800">
+            <ol class="list-decimal pl-5 space-y-2">
+              <li>Promote free and quality education among children, youth, and underprivileged communities through digital labs, training programs, and workshops.</li>
+              <li>Promote environmental protection through tree plantation, circular waste management, climate awareness, and conservation.</li>
+              <li>Create awareness regarding responsible resource utilization and circular economy principles.</li>
+              <li>Undertake public sanitation, clean water, and pollution mitigation initiatives.</li>
+              <li>Support farmers and rural communities through agricultural capacity building and sustainable practices.</li>
+              <li>Promote women empowerment through vocational education, self-help groups, and micro-entrepreneurship.</li>
+              <li>Collaborate with government bodies, CSR organizations, and institutions for social welfare.</li>
+              <li>Encourage volunteerism and civic community participation across India.</li>
+            </ol>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderPrograms(root) {
+      const data = getStore();
+      root.innerHTML = `
+        <div class="max-w-7xl mx-auto px-4 py-12 space-y-8 text-xs">
+          <div class="text-center space-y-2">
+            <span class="text-xs font-bold text-sky-700 uppercase tracking-widest">Action Verticals</span>
+            <h1 class="text-3xl font-extrabold text-slate-900">Charitable Programs & Initiatives</h1>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            ${data.programs.map(p => `
+              <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs flex flex-col sm:flex-row">
+                <img src="${p.image_url}" class="w-full sm:w-48 h-48 object-cover"/>
+                <div class="p-5 flex-1 space-y-2">
+                  <span class="px-2 py-0.5 rounded bg-sky-50 text-sky-800 font-bold text-[10px] uppercase border border-sky-200">${p.category}</span>
+                  <h3 class="font-bold text-sm text-slate-900">${p.title}</h3>
+                  <p class="text-gray-600 leading-relaxed">${p.description}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderVolunteerRegister(root) {
+      root.innerHTML = `
+        <div class="max-w-2xl mx-auto px-4 py-12 space-y-6 text-xs">
+          <div class="text-center space-y-2">
+            <span class="text-xs font-bold text-sky-700 uppercase tracking-widest">Join The Movement</span>
+            <h1 class="text-2xl font-extrabold text-slate-900">Volunteer Membership Registration</h1>
+            <p class="text-gray-600">Join our Pan-India volunteer squad. All members serve in an honorary capacity without salary as mandated by Section 8 rules.</p>
+          </div>
+          <form onsubmit="handleVolunteerRegisterSubmit(event)" class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block font-semibold mb-1">Full Legal Name *</label>
+                <input type="text" name="name" class="w-full p-2 rounded-lg border border-gray-300" required/>
+              </div>
+              <div>
+                <label class="block font-semibold mb-1">Email Address *</label>
+                <input type="email" name="email" class="w-full p-2 rounded-lg border border-gray-300" required/>
+              </div>
+              <div>
+                <label class="block font-semibold mb-1">Mobile / WhatsApp Number *</label>
+                <input type="tel" name="mobile" class="w-full p-2 rounded-lg border border-gray-300" required/>
+              </div>
+              <div>
+                <label class="block font-semibold mb-1">City / District *</label>
+                <input type="text" name="city" class="w-full p-2 rounded-lg border border-gray-300" required/>
+              </div>
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">Primary Area of Interest *</label>
+              <select name="interests" class="w-full p-2 rounded-lg border border-gray-300">
+                <option>Education and Youth Mentorship</option>
+                <option>Environment & Tree Plantation</option>
+                <option>Preventive Health Camps</option>
+                <option>Women Empowerment</option>
+              </select>
+            </div>
+            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200 text-[11px] text-gray-600">
+              By submitting this form, I affirm that my participation is purely voluntary and honorary in nature without any remuneration or financial entitlement as per Section 8 of the Companies Act, 2013.
+            </div>
+            <button type="submit" class="w-full py-2.5 rounded-lg bg-[#0369a1] hover:bg-sky-800 text-white font-bold transition">
+              Submit Application
+            </button>
+          </form>
+        </div>
+      `;
+    }
+
+    function handleVolunteerRegisterSubmit(e) {
+      e.preventDefault();
+      const f = e.target;
+      const data = getStore();
+      const ref = `APP-2026-${String(data.volunteers.length + 1).padStart(5, '0')}`;
+      data.volunteers.push({
+        id: Date.now(),
+        ref,
+        name: f.name.value.trim(),
+        email: f.email.value.trim(),
+        mobile: f.mobile.value.trim(),
+        city: f.city.value.trim(),
+        interests: f.interests.value,
+        status: 'Pending'
+      });
+      saveStore(data);
+      showToast(`Application submitted! Reference: ${ref}`);
+      f.reset();
+      window.location.hash = '#home';
+    }
+
+    function renderTransparency(root) {
+      root.innerHTML = `
+        <div class="max-w-4xl mx-auto px-4 py-12 space-y-6 text-xs">
+          <h1 class="text-2xl font-bold text-slate-900">Section 8 Statutory Disclosures & Compliance</h1>
+          <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4 text-gray-700 leading-relaxed">
+            <p><strong>Entity Name:</strong> RI8WIN NOBEL PATH FOUNDATION</p>
+            <p><strong>Corporate Identification Number (CIN):</strong> U88900MH2026NPL481549</p>
+            <p><strong>Permanent Account Number (PAN):</strong> AAQCR4085D | <strong>TAN:</strong> PNER43317B</p>
+            <p><strong>Applicable Act:</strong> Section 8, Companies Act, 2013 (Ministry of Corporate Affairs, India)</p>
+            <p><strong>Honorary Office Policy:</strong> As mandated by law, directors, members, and officers receive no salary, remuneration, commission, or dividend. All donations and income are applied 100% towards the non-profit objects.</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderContact(root) {
+      const data = getStore();
+      const s = data.settings;
+      root.innerHTML = `
+        <div class="max-w-4xl mx-auto px-4 py-12 space-y-6 text-xs">
+          <h1 class="text-2xl font-bold text-slate-900">Contact Directorate & Registered Office</h1>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-gray-200 space-y-3">
+              <h3 class="font-bold text-sm text-sky-900">Registered Office</h3>
+              <p class="text-gray-600">${s.registered_office}</p>
+              <div><strong>Email:</strong> ${s.contact_email}</div>
+              <div><strong>Phone:</strong> ${s.contact_phone}</div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-gray-200 space-y-3">
+              <h3 class="font-bold text-sm text-sky-900">Send an Inquiry</h3>
+              <input type="text" placeholder="Your Name" class="w-full p-2 border rounded"/>
+              <input type="email" placeholder="Your Email" class="w-full p-2 border rounded"/>
+              <textarea placeholder="Message" rows="3" class="w-full p-2 border rounded"></textarea>
+              <button onclick="showToast('Inquiry sent successfully!')" class="w-full py-2 bg-sky-700 text-white font-bold rounded">Submit</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // 9. Admin Dashboard
+    function renderAdminDashboard(root) {
+      const data = getStore();
+      root.innerHTML = `
+        <div class="max-w-7xl mx-auto px-4 py-10 space-y-8 text-xs">
+          <div class="flex items-center justify-between border-b pb-4">
+            <div>
+              <span class="text-[10px] font-bold text-sky-700 uppercase tracking-widest">Administrative Directorate</span>
+              <h1 class="text-2xl font-bold text-slate-900">RI8WIN Central Management Portal</h1>
+            </div>
+            <div class="flex gap-2">
+              <button onclick="adminDirectIssueCert()" class="px-3.5 py-2 rounded-xl bg-sky-700 text-white font-bold hover:bg-sky-800 transition">
+                + Issue Direct Certificate
+              </button>
+              <button onclick="adminDraftLetter()" class="px-3.5 py-2 rounded-xl bg-slate-800 text-white font-bold hover:bg-slate-900 transition">
+                + Draft Official Letter
+              </button>
+            </div>
+          </div>
+
+          <!-- Summary Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            <div class="p-4 bg-white rounded-2xl border border-gray-200">
+              <div class="text-xl font-bold text-sky-700">${data.volunteers.length}</div>
+              <div class="text-gray-500 text-[11px] mt-1">Volunteers</div>
+            </div>
+            <div class="p-4 bg-white rounded-2xl border border-gray-200">
+              <div class="text-xl font-bold text-emerald-700">${data.certificates.length}</div>
+              <div class="text-gray-500 text-[11px] mt-1">Certificates Issued</div>
+            </div>
+            <div class="p-4 bg-white rounded-2xl border border-gray-200">
+              <div class="text-xl font-bold text-amber-700">${data.official_letters.length}</div>
+              <div class="text-gray-500 text-[11px] mt-1">Official Letters</div>
+            </div>
+            <div class="p-4 bg-white rounded-2xl border border-gray-200">
+              <div class="text-xl font-bold text-teal-700">${data.donations.length}</div>
+              <div class="text-gray-500 text-[11px] mt-1">Donation Records</div>
+            </div>
+          </div>
+
+          <!-- Section: Certificates Table -->
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 space-y-3">
+            <h3 class="font-bold text-sm text-slate-900">Issued Certificates Registry</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead class="bg-stone-50 border-b">
+                  <tr><th class="p-2">Recipient</th><th class="p-2">Type / Role</th><th class="p-2">Cert #</th><th class="p-2">Date</th><th class="p-2">Action</th></tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  ${data.certificates.map(c => `
+                    <tr>
+                      <td class="p-2 font-bold">${c.volunteer_name}</td>
+                      <td class="p-2">${c.certificate_type || 'Volunteer'}</td>
+                      <td class="p-2 font-mono">${c.certificate_number}</td>
+                      <td class="p-2">${c.issue_date}</td>
+                      <td class="p-2">
+                        <button onclick='printDirectCert(${JSON.stringify(c)})' class="text-sky-700 hover:underline font-bold">Print</button>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section: Official Letters -->
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 space-y-3">
+            <h3 class="font-bold text-sm text-slate-900">Official Letters on Foundation Letterhead</h3>
+            <div class="space-y-2">
+              ${data.official_letters.map(l => `
+                <div class="p-3 bg-stone-50 rounded-xl border flex justify-between items-center">
+                  <div>
+                    <span class="font-mono text-xs text-sky-800 font-bold">${l.reference_number}</span>
+                    <h4 class="font-bold text-gray-900">${l.recipient_name} — ${l.letter_title}</h4>
+                    <div class="text-[11px] text-gray-500">${l.letter_type} • Date: ${l.issue_date}</div>
+                  </div>
+                  <button onclick='printOfficialLetter(${JSON.stringify(l)})' class="px-3 py-1.5 rounded-lg bg-sky-700 text-white font-bold hover:bg-sky-800">
+                    View & Print Letter
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function adminDirectIssueCert() {
+      const name = prompt('Recipient Full Name:');
+      if (!name) return;
+      const type = prompt('Certificate Type (e.g. Volunteer Service Certificate, Honorary Member Certificate, Appreciation Certificate):', 'Honorary Member Certificate');
+      const role = prompt('Role / Designation (e.g. Executive Member, State Coordinator, Active Volunteer):', 'Executive Committee Member');
+      const tenure = prompt('Tenure / Service Hours:', 'Annual Term 2026-2027');
+
+      const data = getStore();
+      const num = `CERT-RI8-2026-${Math.floor(10000 + Math.random() * 90000)}`;
+      const mid = `RI8-MEM-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+
+      const newCert = {
+        id: Date.now(),
+        certificate_number: num,
+        membership_id: mid,
+        volunteer_name: name,
+        certificate_type: type,
+        role_title: role,
+        tenure_or_hours: tenure,
+        issue_date: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }),
+        status: 'Issued'
+      };
+
+      data.certificates.push(newCert);
+      saveStore(data);
+      showToast('Certificate created successfully!');
+      printDirectCert(newCert);
+    }
+
+    function adminDraftLetter() {
+      const name = prompt('Recipient Name:');
+      if (!name) return;
+      const role = prompt('Recipient Designation:', 'State Coordinator');
+      const title = prompt('Letter Subject / Title:', 'APPOINTMENT AS HONORARY STATE COORDINATOR');
+      const body = prompt('Letter Content Body:', 'We are pleased to confirm your appointment under Section 8 honorary provisions without salary or profit distribution.');
+
+      const data = getStore();
+      const ref = `RI8WIN/LET/2026/${String(data.official_letters.length + 1).padStart(3, '0')}`;
+      const letter = {
+        id: Date.now(),
+        reference_number: ref,
+        letter_type: 'Honorary Appointment Letter (Section 8 Compliant)',
+        recipient_name: name,
+        recipient_role: role,
+        letter_title: title,
+        letter_body: body,
+        issue_date: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }),
+        authorized_signatory: 'Ms. Shilpa Sunil Umare & Ms. Sarika Uttamchand Wakde, Directors'
+      };
+
+      data.official_letters.push(letter);
+      saveStore(data);
+      showToast('Letter drafted successfully!');
+      printOfficialLetter(letter);
+    }
+
+    function printOfficialLetter(l) {
+      const data = getStore();
+      const s = data.settings;
+      const html = `
+        <div id="printable-modal-content" class="p-8 bg-white space-y-6 text-xs text-gray-800 leading-relaxed">
+          <!-- Official Letterhead Header -->
+          <div class="border-b-2 border-sky-900 pb-4 flex justify-between items-start gap-4">
+            <div>
+              <div class="text-xs font-bold text-sky-800 tracking-wider uppercase">Ministry of Corporate Affairs • Govt. of India</div>
+              <h2 class="text-base font-black text-slate-900">${s.legal_name}</h2>
+              <div class="text-[11px] text-gray-500">Registered Section 8 Non-Profit Organization</div>
+              <div class="text-[10px] text-gray-500">CIN: <strong>${s.cin}</strong> | PAN: <strong>${s.pan}</strong> | TAN: <strong>${s.tan}</strong></div>
+              <div class="text-[10px] text-gray-500">${s.registered_office}</div>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-sky-900 text-white font-bold flex items-center justify-center text-lg">R8</div>
+          </div>
+
+          <!-- Letter Meta -->
+          <div class="flex justify-between items-center text-xs border-b pb-2">
+            <div><strong>Ref No:</strong> <span class="font-mono">${l.reference_number}</span></div>
+            <div><strong>Date of Issue:</strong> ${l.issue_date}</div>
+          </div>
+
+          <!-- Recipient -->
+          <div class="space-y-0.5">
+            <div>To,</div>
+            <div class="font-bold text-sm text-slate-900">${l.recipient_name}</div>
+            <div class="text-gray-600">${l.recipient_role}</div>
+          </div>
+
+          <!-- Subject -->
+          <div class="font-bold text-slate-900 uppercase border-y py-2 text-center bg-stone-50">
+            Subject: ${l.letter_title}
+          </div>
+
+          <!-- Body -->
+          <div class="whitespace-pre-line text-xs leading-relaxed space-y-4">
+            ${l.letter_body}
+          </div>
+
+          <!-- Section 8 Honorary Clause -->
+          <div class="p-3 bg-stone-100 rounded-xl border border-stone-200 text-[10px] text-gray-600">
+            <strong>Section 8 Statutory Disclaimer:</strong> This official communication is issued by RI8WIN NOBEL PATH FOUNDATION pursuant to Section 8 of the Companies Act, 2013. The Foundation does not distribute profits or pay remuneration to its directors or members.
+          </div>
+
+          <!-- Signatures -->
+          <div class="flex justify-between items-end pt-8">
+            <div class="text-[10px] text-gray-400">Official Directorate Seal & Record</div>
+            <div class="text-center">
+              <div class="font-serif italic font-bold text-sky-900">Shilpa Sunil Umare & Sarika Uttamchand Wakde</div>
+              <div class="text-[10px] text-gray-600 font-semibold">Board of Directors</div>
+              <div class="text-[9px] text-gray-400">RI8WIN NOBEL PATH FOUNDATION</div>
+            </div>
+          </div>
+
+          <div class="flex justify-end gap-3 pt-4 border-t no-print">
+            <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-sky-800 text-white font-bold hover:bg-sky-900 transition flex items-center gap-1.5">
+              <span>🖨️</span> Print Official Letterhead
+            </button>
+          </div>
+        </div>
+      `;
+      openGenericModal(html);
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      closeModal('auth-modal');
+      window.location.hash = '#admin';
+      showToast('Welcome, Administrator!');
+    }
+  </script>
+</body>
+</html>
